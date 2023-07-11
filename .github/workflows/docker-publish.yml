@@ -49,7 +49,8 @@ jobs:
           linux/amd64
           linux/arm64
         tags: |
-          ${{ env.REGISTRY }}/lynx-chess/lichess-bot-playground:${{ env.LICHESS-BOT-PLAYGROUND-VERSION }},${{ env.REGISTRY }}/lynx-chess/lichess-bot-playground:latest
+          ${{ env.REGISTRY }}/lynx-chess/lichess-bot-playground:${{ env.LICHESS-BOT-PLAYGROUND-VERSION }}
+          ${{ env.REGISTRY }}/lynx-chess/lichess-bot-playground:latest
         push: true
 
     - name: Image digest
