@@ -1,6 +1,6 @@
 # lichess-bot-playground
 
-Docker image that wraps [lichess-bot](https://github.com/lichess-bot-devs/lichess-bot), has all its dependencies installed and therefore it's 'ready to use'.
+Docker image around [lichess-bot](https://github.com/lichess-bot-devs/lichess-bot) that has all its dependencies pre-installed and therefore it's 'ready to use'.
 
 ## Starting the playground
 
@@ -28,12 +28,12 @@ docker run -it `
 
 ## Configuring the playground to run your chess engine
 
-Once inside the container, you should be able to run `python3 lichess-bot.py` command.
+Once inside the container, you should be able to run `python3 lichess-bot.py` command, even if it fails.
 
-However to make `lichess-bot` work properly, `config.yml` file needs to be tweaked as desired, but at least:
+However, to make `lichess-bot` work properly, `config.yml` file needs to be tweaked as desired, but at least:
 
 - Modifying engine__dir and engine__name so that they point to your engine's Linux binary.
 
 - Providing a lichess bot token. This can also be done via the environment variable `LICHESS_BOT_TOKEN` (i.e. appending `LICHESS_BOT_TOKEN=xxxxxxxx` to the docker command) instead of manually in the file.
 
-See [lichess-bot](https://github.com/lichess-bot-devs/lichess-bot) for configuration more information.
+See [lichess-bot](https://github.com/lichess-bot-devs/lichess-bot) for more information about its configuration.
